@@ -1,0 +1,163 @@
+.about-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-introduction {
+  flex-basis: 600px;
+}
+
+.greeting {
+  background-color: var(--dim-color);
+  border-radius: 8px;
+  position: relative;
+  margin: 0;
+  padding: 24px 32px;
+  line-height: 32px;
+}
+
+.greeting:after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  border-left-color: var(--dim-color);
+  border-width: 25px;
+  margin-top: -25px;
+}
+
+.greeting-hello {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+  color: var(--highlight-color);
+}
+
+.greeting p {
+  margin: 0;
+}
+
+.about-actions {
+  margin-top: 56px;
+}
+
+.about-actions .btn:last-child {
+  margin-left: 24px;
+}
+
+.about-actions a {
+  transition: all 0.3s;
+}
+
+.about-photo {
+  width: 300px;
+  margin-left: 40px;
+}
+
+.about-photo img {
+  border-radius: 50%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-skills {
+  margin-top: 56px;
+}
+
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  gap: 26px;
+}
+
+.skills-list-item {
+  flex-basis: 154px;
+  border-radius: 8px;
+  background-color: var(--dim-color);
+  transition: all 0.3s;
+}
+
+.skills-list-item img {
+  max-height: 80px;
+  width: 100%;
+}
+
+.skill-link {
+  display: block;
+  height: 160px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 24px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.skill-link:focus {
+  box-shadow: 0 0 0 2px #fff;
+  outline: none;
+}
+
+.skill-name {
+  margin: 12px 0 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .greeting:after {
+    display: none;
+  }
+
+  .greeting p {
+    line-height: 24px;
+  }
+
+  .about-content {
+    position: relative;
+    padding-top: 60px;
+  }
+
+  .about-photo {
+    position: absolute;
+    width: 120px;
+    top: 0%;
+    right: 16px;
+  }
+
+  .about-photo img {
+    border: 4px solid var(--primary-bg-color);
+  }
+
+  .about-introduction {
+    flex-basis: 100%;
+  }
+
+  .about-actions {
+    display: flex;
+    margin-top: 32px;
+    justify-content: center;
+  }
+
+  .about-skills {
+    margin-top: 32px;
+  }
+
+  .skills-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

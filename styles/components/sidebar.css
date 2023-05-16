@@ -1,0 +1,144 @@
+#sidebar-trigger {
+  display: none;
+}
+
+.sidebar {
+  min-height: 100%;
+  box-shadow: 1px 0px 4px #000;
+  z-index: 5;
+}
+
+.sidebar-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 100%;
+  top: 40px;
+  width: 56px;
+  height: 56px;
+  border-radius: 0px 8px 8px 0px;
+  color: var(--text-color);
+  font-size: 24px;
+  background-color: var(--highlight-color);
+  cursor: pointer;
+}
+
+.nav {
+  padding: 26px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--secondary-bg-color);
+}
+
+.nav-logo-wrapper {
+  padding: 6px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--highlight-color);
+}
+
+.nav-logo-img {
+  width: 100%;
+}
+
+.nav-list {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--highlight-color);
+}
+
+.nav-link-icon {
+  font-size: 32px;
+}
+
+.nav-link-text {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--highlight-color);
+  font-size: 22px;
+  transition: all 0.3s;
+}
+
+.to-top:hover {
+  background-color: #22b372;
+}
+
+@media only screen and (max-width: 768px) {
+  #sidebar-trigger:checked ~ .sidebar {
+    transform: translateX(0%);
+  }
+
+  .sidebar-toggle {
+    display: flex;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: none;
+    transform: translateX(-100%);
+    transition: 0.5s ease;
+  }
+
+  .nav-link {
+    width: 56px;
+    height: 56px;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-logo-wrapper {
+    display: none;
+  }
+
+  .nav-link-icon {
+    font-size: 22px;
+  }
+
+  .nav-link-text {
+    display: none;
+  }
+
+  .to-top {
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    z-index: 10;
+    position: absolute;
+    bottom: 10px;
+    margin: 0;
+  }
+}

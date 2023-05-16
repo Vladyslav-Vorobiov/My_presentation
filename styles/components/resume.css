@@ -1,0 +1,74 @@
+.resume-content {
+  display: flex;
+  gap: 30px;
+}
+
+.education,
+.experience {
+  flex-basis: 100%;
+}
+
+.education-icon,
+.experience-icon {
+  margin-right: 12px;
+}
+
+.resume-list {
+  min-height: 800px;
+  background-color: var(--dim-color);
+  border-radius: 8px;
+  margin: 0;
+  padding: 24px;
+  list-style: none;
+}
+
+.resume-item {
+  border-left: 2px solid var(--highlight-color);
+}
+
+.resume-item:not(:first-child) {
+  margin-top: 24px;
+}
+
+.resume-item > * {
+  padding-left: 32px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.item-title {
+  margin: 0;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.item-subtitle {
+  margin-top: 12px;
+  position: relative;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.item-subtitle:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 2px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: var(--highlight-color);
+  transform: translateX(-57%);
+}
+
+.item-text {
+  margin: 12px 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .resume-content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
+}

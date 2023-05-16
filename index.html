@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="images/favicon-star.png" />
+
+    <title>Vladyslav Vorobiov</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="grid">
+      <input type="checkbox" id="sidebar-trigger" />
+
+      <aside class="sidebar">
+        <nav class="nav">
+          <div class="nav-logo-wrapper focused-nav-logo">
+            <img
+              src="./images/aside-logo.png"
+              class="nav-logo-img"
+              alt="generics and slash"
+            />
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#hero" class="nav-link">
+                <i class="nav-link-icon fas fa-home"></i>
+                <span class="nav-link-text">home</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">
+                <i class="nav-link-icon fas fa-user"></i>
+                <span class="nav-link-text">about</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#resume" class="nav-link">
+                <i class="nav-link-icon fas fa-id-card"></i>
+                <span class="nav-link-text">resume</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">
+                <i class="nav-link-icon fas fa-briefcase"></i>
+                <span class="nav-link-text">portfolio</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#contacts" class="nav-link">
+                <i class="nav-link-icon fas fa-envelope"></i>
+                <span class="nav-link-text">contact</span></a
+              >
+            </li>
+          </ul>
+          <a
+            class="to-top fas fa-chevron-up"
+            href="#to-top"
+            aria-label="scroll to top"
+          ></a>
+        </nav>
+        <label
+          for="sidebar-trigger"
+          class="sidebar-toggle fas fa-bars"
+          aria-label="navigation toggle button"
+        ></label>
+      </aside>
+
+      <main class="content">
+        <div id="to-top"></div>
+        <section id="hero" class="hero section">
+          <div class="container">
+            <h1 class="hero-title">Vladyslav Vorobiov</h1>
+            <p class="hero-subtitle">I am a Front-End Developer</p>
+            <ul class="hero-social-icons">
+              <li class="hero-social-icon">
+                <a
+                  href="https://www.linkedin.com/in/vladyslav-vorobiov-1990/"
+                  target="_blank"
+                  class="icon-link fab fa-linkedin-in"
+                ></a>
+              </li>
+              <li class="hero-social-icon">
+                <a
+                  href="https://github.com/Vladyslav-Vorobiov"
+                  target="_blank"
+                  class="icon-link fab fa-github"
+                ></a>
+              </li>
+              <li class="hero-social-icon">
+                <a
+                  href="https://t.me/Mista_Twista"
+                  target="_blank"
+                  class="icon-link fas fa-paper-plane"
+                ></a>
+              </li>
+              <li class="hero-social-icon">
+                <a
+                  href="https://www.facebook.com/pablito.piupiu.3"
+                  target="_blank"
+                  class="icon-link fab fa-facebook-f"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="about" class="about section">
+          <div class="container">
+            <h1 class="section-title">
+              About <span class="highlight-color">me</span>
+            </h1>
+            <div class="about-content">
+              <div class="about-introduction">
+                <div class="greeting">
+                  <span class="greeting-hello">Hello,</span>
+                  <p>
+                    My name is Vladyslav Vorobiov, I'm a Front-End Developer
+                    from Odessa, Ukraine. And I'm really good at designing,
+                    building and customising adaptive and interactive websites
+                    and apps.
+                  </p>
+                </div>
+                <div class="about-actions">
+                  <a
+                    href="./cv/CV_Vladyslav_Vorobiov_Front-end.pdf"
+                    download
+                    class="btn btn-secondary hovered-content-item focused-item"
+                    >Download CV</a
+                  >
+                  <a
+                    href="#contacts"
+                    class="btn btn-secondary hovered-content-item focused-item"
+                    >Hire me</a
+                  >
+                </div>
+              </div>
+              <div class="about-photo">
+                <img src="images/photo_copy.jpg" alt="my avatar" />
+              </div>
+            </div>
+            <div class="about-skills">
+              <h2 class="section-subtitle">
+                here are <span class="highlight-color">my skills</span>
+              </h2>
+              <ul class="skills-list">
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/HTML5"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-html.svg"
+                      class="skill-img"
+                      alt="HTML5 Logo"
+                    />
+                    <h4 class="skill-name">HTML5</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/CSS"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-css.svg"
+                      class="skill-img"
+                      alt="CSS3 Logo"
+                    />
+                    <h4 class="skill-name">CSS3</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/JavaScript"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-js.svg"
+                      class="skill-img"
+                      alt="JavaScript Logo"
+                    />
+                    <h4 class="skill-name">JavaScript</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Sass"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-sass.svg"
+                      class="skill-img"
+                      alt="SASS Logo"
+                    />
+                    <h4 class="skill-name">SASS</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-bootstrap.svg"
+                      class="skill-img"
+                      alt="Bootstrap Logo"
+                    />
+                    <h4 class="skill-name">Bootstrap</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://ru.wikipedia.org/wiki/Gulp"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-gulp.svg"
+                      class="skill-img"
+                      alt="Gulp Logo"
+                    />
+                    <h4 class="skill-name">Gulp</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://react.dev/"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-react.svg"
+                      class="skill-img"
+                      alt="React Logo"
+                    />
+                    <h4 class="skill-name">React</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://redux-toolkit.js.org/"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-redux.svg"
+                      class="skill-img"
+                      alt="Redux Toolkit Logo"
+                    />
+                    <h4 class="skill-name">Redux Toolkit</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://react-bootstrap.github.io/"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-rb.svg"
+                      class="skill-img"
+                      alt="React Bootstrap Logo"
+                    />
+                    <h4 class="skill-name">React Bootstrap</h4>
+                  </a>
+                </li>
+                <li class="skills-list-item hovered-content-item">
+                  <a
+                    href="https://react-bootstrap.github.io/"
+                    target="_blank"
+                    class="skill-link"
+                  >
+                    <img
+                      src="images/skills/skills-logo-ts.svg"
+                      class="skill-img"
+                      alt="TypeScript Logo"
+                    />
+                    <h4 class="skill-name">TypeScript</h4>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="resume" class="resume section">
+          <div class="container">
+            <h1 class="section-title">
+              my <span class="highlight-color">resume</span>
+            </h1>
+            <div class="resume-content">
+              <!-- EDUCATION -->
+              <div class="education">
+                <h3 class="section-subtitle">
+                  <span
+                    class="highlight-color education-icon fas fa-graduation-cap"
+                  >
+                  </span
+                  >Education
+                </h3>
+                <ul class="resume-list">
+                  <li class="resume-item">
+                    <h4 class="item-title">2022 - 2023 | JunJun IT</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      React + TypeScript course
+                    </h4>
+                    <p class="item-text">
+                      Graduated with honours. Mastered technologies: React,
+                      React Router, Redux Toolkit, TypeScript. <br />
+                      Libraries: Formik, Yup, Lodash, Axios, Immutable, ESLint,
+                      Classnames. Created several projects using these
+                      technologies and libraries.
+                    </p>
+                  </li>
+                  <li class="resume-item">
+                    <h4 class="item-title">2022 | hillel IT school</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      Front-end pro course
+                    </h4>
+                    <p class="item-text">
+                      Graduated with honours. Mastered JavaScript ES6+ and its
+                      up-to-date principles and methodologies. Created several
+                      interactive projects by means of JS.
+                    </p>
+                  </li>
+                  <li class="resume-item">
+                    <h4 class="item-title">2021 | hillel IT school</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      front-end basic course
+                    </h4>
+                    <p class="item-text">
+                      Graduated with honours. Mastered technologies: HTML5,
+                      CSS3, SASS, Bootstrap, Gulp, BEM. Learned how to make
+                      adaptive and responsive layouts, created several.
+                    </p>
+                  </li>
+                  <li class="resume-item">
+                    <h4 class="item-title">
+                      2012 - 2014 | odessa national maritime university
+                    </h4>
+                    <h4 class="item-subtitle highlight-color">
+                      department of project management
+                    </h4>
+                    <p class="item-text">
+                      Master's degree in projects and programs management.
+                    </p>
+                  </li>
+                  <li class="resume-item">
+                    <h4 class="item-title">
+                      2008 - 2014 | odessa national maritime university
+                    </h4>
+                    <h4 class="item-subtitle highlight-color">
+                      department of port engineering
+                    </h4>
+                    <p class="item-text">
+                      Master's degree in mechanical engineering.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="experience">
+                <h3 class="section-subtitle">
+                  <span class="highlight-color experience-icon fas fa-pen">
+                  </span
+                  >Experience
+                </h3>
+                <ul class="resume-list">
+                  <li class="resume-item">
+                    <h4 class="item-title">2022 - till now | EXSY</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      Junior front-end developer / part-time
+                    </h4>
+                    <p class="item-text">
+                      Development of functional and class React-Components using
+                      cutting-edge libraries and tools. Configuration of
+                      react-routes. Building and launching apps. Debugging code.
+                      <br />
+                      Stack: React, React Router, Redux Toolkit, JS
+                    </p>
+                  </li>
+                  <li class="resume-item">
+                    <h4 class="item-title">2021 - 2022 | hillel IT</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      Trainee front-end developer / part-time
+                    </h4>
+                    <p class="item-text">
+                      Creation of interactive adaptive landings and web sites
+                      through the Rest API. Debugging code. <br />
+                      Stack: HTML, CSS, JavaScript
+                    </p>
+                  </li>
+                  <li class="resume-item">
+                    <h4 class="item-title">2019-2022 | MHM Ukraine Ltd.</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      Sales &amp; Project Manager
+                    </h4>
+                    <p class="item-text">
+                      Sale and supply of industrial equipment. Customer search,
+                      contracting, whole lifecycle project management.
+                    </p>
+                  </li>
+                  <li class="resume-item">
+                    <h4 class="item-title">2014-2019 | Dialab Ltd.</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      Mechanical engineer
+                    </h4>
+                    <p class="item-text">
+                      Inspection and technical diagnostics of port cargo-lifting
+                      equipment. Preparation of protocols on the technical
+                      condition of the equipment. Drawing up and issuing expert
+                      conclusions on the results of the inspection.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="portfolio" class="portfolio section">
+          <div class="container">
+            <h1 class="section-title">
+              my <span class="highlight-color">works</span>
+            </h1>
+            <ul class="portfolio-items">
+              <li class="portfolio-item">
+                <a
+                  href="https://react-phonebook-six.vercel.app/"
+                  target="_blank"
+                  class="portfolio-item-link focused-item"
+                >
+                  <img
+                    src="images/portfolio/phonebook.jpg"
+                    class="portfolio-item-img"
+                    alt="Phonebook application"
+                  />
+                  <div class="portfolio-item-footer">
+                    <h3 class="item-footer-name">Phonebook</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="portfolio-item">
+                <a
+                  href="https://react-todo-list-zeta-olive.vercel.app/"
+                  target="_blank"
+                  class="portfolio-item-link focused-item"
+                >
+                  <img
+                    src="images/portfolio/todolist.jpg"
+                    class="portfolio-item-img"
+                    alt="Todo list"
+                  />
+                  <div class="portfolio-item-footer">
+                    <h3 class="item-footer-name">ToDo list</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="portfolio-item">
+                <a
+                  href="https://appliance-layout.vercel.app/"
+                  target="_blank"
+                  class="portfolio-item-link focused-item"
+                >
+                  <img
+                    src="images/portfolio/appliance.jpg"
+                    class="portfolio-item-img"
+                    alt="Appliance layout"
+                  />
+                  <div class="portfolio-item-footer">
+                    <h3 class="item-footer-name">
+                      "Appliance" - adaptive layout
+                    </h3>
+                  </div>
+                </a>
+              </li>
+              <li class="portfolio-item">
+                <a
+                  href="https://animated-cube.vercel.app/"
+                  target="_blank"
+                  class="portfolio-item-link focused-item"
+                >
+                  <img
+                    src="images/portfolio/cube.jpg"
+                    class="portfolio-item-img"
+                    alt="Responsive portfolio"
+                  />
+                  <div class="portfolio-item-footer">
+                    <h3 class="item-footer-name">animated 3D cube</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="portfolio-item">
+                <a
+                  href="https://grid-gallery-iota.vercel.app/"
+                  target="_blank"
+                  class="portfolio-item-link focused-item"
+                >
+                  <img
+                    src="images/portfolio/grid-gallery.jpg"
+                    class="portfolio-item-img"
+                    alt="Animated 3D cube"
+                  />
+                  <div class="portfolio-item-footer">
+                    <h3 class="item-footer-name">responsive grid gallery</h3>
+                  </div>
+                </a>
+              </li>
+              <li class="portfolio-item">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="portfolio-item-link focused-item"
+                >
+                  <img
+                    src="images/portfolio/bootstrap-templ.jpg"
+                    class="portfolio-item-img"
+                    alt="Responsive grid gallery"
+                  />
+                  <div class="portfolio-item-footer">
+                    <h3 class="item-footer-name">bootstrap teemplate</h3>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="contacts" class="contacts section">
+          <div class="container">
+            <h1 class="section-title">
+              get <span class="highlight-color">in touch</span>
+            </h1>
+            <div class="contacts-content">
+              <ul class="contacts-list">
+                <li class="contacts-item">
+                  <a
+                    href="https://goo.gl/maps/PhiFJm68dr563XWe7?coh=178571&entry=tt"
+                    target="_blank"
+                    class="contacts-item-link focused-item"
+                  >
+                    <span
+                      class="contacts-item-icon fas fa-map-marker-alt highlight-color"
+                    >
+                    </span>
+                    <span class="contacts-item-name">Bucharest, Romania</span>
+                  </a>
+                </li>
+
+                <li class="contacts-item">
+                  <a
+                    href="tel:+380936007727"
+                    target="_blank"
+                    class="contacts-item-link focused-item"
+                  >
+                    <span
+                      class="contacts-item-icon fas fa-phone-alt highlight-color"
+                    >
+                    </span>
+                    <span class="contacts-item-name">(+38) 093 600 77 27</span>
+                  </a>
+                </li>
+
+                <li class="contacts-item">
+                  <a
+                    href="mailto:vorobiov.90@gmail.com"
+                    target="_blank"
+                    class="contacts-item-link focused-item"
+                  >
+                    <span
+                      class="contacts-item-icon fas fa-envelope highlight-color"
+                    >
+                    </span>
+                    <span class="contacts-item-name"
+                      >vorobiov.v90@gmail.com</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <form id="form" class="contact-form">
+                <div class="contact-form-line">
+                  <input
+                    type="text"
+                    name="name"
+                    class="contact-form-field"
+                    placeholder="Name *"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="email"
+                    class="contact-form-field"
+                    placeholder="Email *"
+                    required
+                  />
+                </div>
+                <div class="contact-form-line">
+                  <input
+                    type="text"
+                    name="subject"
+                    class="contact-form-field"
+                    placeholder="Subject *"
+                    required
+                  />
+                </div>
+                <div class="contact-form-line">
+                  <textarea
+                    name="message"
+                    rows="7"
+                    class="contact-form-field"
+                    placeholder="Write message"
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-submit focused-item"
+                >
+                  send message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

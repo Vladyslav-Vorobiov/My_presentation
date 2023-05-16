@@ -1,0 +1,88 @@
+.hero {
+  background-image: url(../../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 60px;
+  color: var(--highlight-color);
+  text-align: center;
+}
+
+.hero-subtitle {
+  margin: 36px 0 0;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--text-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.hero-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-color);
+}
+
+.hero-social-icon:not(:last-child) {
+  margin-right: 30px;
+}
+
+.telegram-link {
+  color: white;
+  background-color: white;
+}
+
+.icon-link {
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  font-size: 24px;
+  transition: all 0.5s;
+}
+
+.icon-link:hover {
+  color: var(--highlight-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    position: relative;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  .hero-subtitle {
+    margin-top: 4px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .hero-social-icons {
+    flex-direction: column;
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+  }
+
+  .hero-social-icon {
+    margin: 24px 0 0;
+  }
+
+  .hero-social-icon:not(:last-child) {
+    margin-right: 0px;
+  }
+}

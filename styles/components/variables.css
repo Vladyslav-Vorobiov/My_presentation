@@ -1,0 +1,7 @@
+:root {
+  --primary-bg-color: #343a40;
+  --secondary-bg-color: #2c2d30;
+  --highlight-color: #25ca7f;
+  --text-color: #fff;
+  --dim-color: rgba(255, 255, 255, 0.2);
+}
