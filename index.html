@@ -30,11 +30,10 @@
   </head>
   <body>
     <div class="grid">
-      <input type="checkbox" id="sidebar-trigger" />
-
       <aside class="sidebar">
+        <div class="burger"><span></span></div>
         <nav class="nav">
-          <div class="nav-logo-wrapper focused-nav-logo">
+          <div class="nav-logo-wrapper">
             <img
               src="./images/aside-logo.png"
               class="nav-logo-img"
@@ -79,11 +78,12 @@
             aria-label="scroll to top"
           ></a>
         </nav>
-        <label
-          for="sidebar-trigger"
-          class="sidebar-toggle fas fa-bars"
-          aria-label="navigation toggle button"
-        ></label>
+
+        <!-- <label
+        for="sidebar-trigger"
+        class="sidebar-toggle fas fa-bars"
+        aria-label="navigation toggle button"
+      ></label> -->
       </aside>
 
       <main class="content">
@@ -651,5 +651,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>
