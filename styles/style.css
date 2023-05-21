@@ -42,7 +42,6 @@ textarea:focus::placeholder {
   display: flex;
   align-items: center;
   padding: 80px 0 0;
-  min-height: 100vh;
 }
 
 .container {
@@ -115,8 +114,6 @@ textarea:focus::placeholder {
   background-color: var(--highlight-color);
 }
 
-/* GRID SIDEBAR | CONTENT*/
-
 .grid {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -127,7 +124,7 @@ textarea:focus::placeholder {
 
 @media only screen and (max-width: 768px) {
   .section {
-    padding: 40px 0;
+    padding: 40px 0 0;
   }
 
   .section-title {

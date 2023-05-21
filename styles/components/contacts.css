@@ -1,3 +1,7 @@
+.contacts {
+  margin-bottom: 40px;
+}
+
 .contacts-content {
   display: flex;
   justify-content: space-between;
