@@ -76,14 +76,14 @@
   padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   flex-grow: 1;
   flex-shrink: 1;
   gap: 26px;
 }
 
 .skills-list-item {
-  flex-basis: 154px;
+  flex-basis: 160px;
+  max-width: 154px;
   border-radius: 8px;
   background-color: var(--dim-color);
   transition: all 0.3s;
@@ -91,7 +91,6 @@
 
 .skills-list-item img {
   max-height: 80px;
-  width: 100%;
 }
 
 .skill-link {

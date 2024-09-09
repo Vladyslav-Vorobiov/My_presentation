@@ -49,23 +49,34 @@ function submitHandler(e) {
 }
 
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "vertical",
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
+  breakpoints: {
+    300: {
+      loop: true,
+      slidesPerView: 1, // 1 item per slide on mobile
+      spaceBetween: 16,
+      allowTouchMove: true,
+    },
+    768: {
+      loop: true,
+      slidesPerView: 3, // 3 items per slide on tablet
+      spaceBetween: 24,
+      allowTouchMove: true,
+      watchOverflow: true,
+      autoHeight: false,
+      slidesPerGroup: 3,
+    },
+    1200: {
+      loop: true,
+      slidesPerView: 5, // 5 items per slide on desktop
+      spaceBetween: 24,
+      allowTouchMove: false,
+      watchOverflow: true,
+      autoHeight: false,
+      slidesPerGroup: 5,
+    },
   },
 });
