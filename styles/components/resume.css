@@ -14,16 +14,23 @@
 }
 
 .resume-list {
-  min-height: 800px;
+  min-height: 1040px;
   background-color: var(--dim-color);
   border-radius: 8px;
   margin: 0;
   padding: 24px;
   list-style: none;
+  position: relative;
 }
 
-.resume-item {
-  border-left: 2px solid var(--highlight-color);
+.resume-list:before {
+  position: absolute;
+  content: "";
+  left: 22px;
+  top: 28px;
+  height: 980px;
+  width: 2px;
+  background-color: var(--highlight-color);
 }
 
 .resume-item:not(:first-child) {
@@ -37,13 +44,15 @@
 }
 
 .item-title {
+  font-size: 18px;
   margin: 0;
   font-weight: bold;
   text-transform: capitalize;
 }
 
 .item-subtitle {
-  margin-top: 12px;
+  font-size: 16px;
+  margin: 4px 0 12px 0;
   position: relative;
   font-weight: normal;
   text-transform: capitalize;
@@ -63,6 +72,17 @@
 
 .item-text {
   margin: 12px 0 0;
+}
+
+.item-list {
+  padding: 0;
+  margin-bottom: 14px;
+  list-style-position: outside;
+  list-style-type: "- ";
+}
+
+.item-list-caption {
+  margin: 0;
 }
 
 @media only screen and (max-width: 768px) {

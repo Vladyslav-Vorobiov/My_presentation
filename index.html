@@ -25,6 +25,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link rel="stylesheet" href="styles/style.css" />
   </head>
@@ -85,7 +89,9 @@
         <section id="hero" class="hero section">
           <div class="container">
             <h1 class="hero-title">Vladyslav Vorobiov</h1>
-            <p class="hero-subtitle">I am a Front-End Developer</p>
+            <p class="hero-subtitle">
+              Web Developer. Crafting Front-End with a Deeper Understanding
+            </p>
             <ul class="hero-social-icons">
               <li class="hero-social-icon">
                 <a
@@ -130,7 +136,7 @@
                   <span class="greeting-hello">Hello,</span>
                   <p>
                     My name is Vladyslav Vorobiov, I'm a Front-End Developer
-                    from Odessa, Ukraine. And I'm really good at designing,
+                    from Odessa, Ukraine. And I'm really good at development,
                     building and customising adaptive and interactive websites
                     and apps.
                   </p>
@@ -157,6 +163,27 @@
               <h2 class="section-subtitle">
                 here are <span class="highlight-color">my skills</span>
               </h2>
+
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+
               <ul class="skills-list">
                 <li class="skills-list-item hovered-content-item">
                   <a
@@ -319,6 +346,20 @@
                 </h3>
                 <ul class="resume-list">
                   <li class="resume-item">
+                    <h4 class="item-title">2024 | EPAM</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      Front-end Fundamentals course (JS+TS) <br />
+                      Front-end Specialization course (React)
+                    </h4>
+                    <p class="item-text">
+                      Graduated with honours. Refreshed knowledge with
+                      up-to-date information: JS, TS, React, React Router, Redux
+                      Toolkit. <br />
+                      Created a "courses-list" project with a lot of features by
+                      means of React and local back-end.
+                    </p>
+                  </li>
+                  <li class="resume-item">
                     <h4 class="item-title">2022 - 2023 | JunJun IT</h4>
                     <h4 class="item-subtitle highlight-color">
                       React + TypeScript course
@@ -327,7 +368,7 @@
                       Graduated with honours. Mastered technologies: React,
                       React Router, Redux Toolkit, TypeScript. <br />
                       Libraries: Formik, Yup, Lodash, Axios, Immutable, ESLint,
-                      Classnames. Created several projects using these
+                      Classnames. <br />Created several projects using these
                       technologies and libraries.
                     </p>
                   </li>
@@ -385,17 +426,54 @@
                 </h3>
                 <ul class="resume-list">
                   <li class="resume-item">
-                    <h4 class="item-title">2022 - till now | EXSY</h4>
+                    <h4 class="item-title">07.2023 - till now | QP</h4>
+                    <h4 class="item-subtitle highlight-color">
+                      Font-end developer / full-time
+                    </h4>
+                    <div class="item-text">
+                      <ol class="item-list">
+                        <li>
+                          Collaborating on CRM development: designing and
+                          implementing new components, enhancing existing
+                          features, and customizing solutions to meet business
+                          needs.
+                        </li>
+                        <li>
+                          Website development: building and adapting complex
+                          website layouts with a focus on responsiveness and
+                          user experience.
+                        </li>
+                        <li>Identifying and resolving bugs.</li>
+                        <li>Mentoring newcomers.</li>
+                      </ol>
+                      <p class="item-list-caption">
+                        Stack: HTML, CSS, JS, Vue.js, Vuetify, GitHub, Axios,
+                        Lodash, Jest.
+                      </p>
+                      <p class="item-list-caption">
+                        Work Methodology: Agile/Scrum (Jira, Confluence)
+                      </p>
+                    </div>
+                  </li>
+                  <li class="resume-item">
+                    <h4 class="item-title">09.2022 - 08.2023 | EXSY</h4>
                     <h4 class="item-subtitle highlight-color">
                       Junior front-end developer / part-time
                     </h4>
-                    <p class="item-text">
-                      Development of functional and class React-Components using
-                      cutting-edge libraries and tools. Configuration of
-                      react-routes. Building and launching apps. Debugging code.
-                      <br />
-                      Stack: React, React Router, Redux Toolkit, JS
-                    </p>
+                    <div class="item-text">
+                      <ol class="item-list">
+                        <li>
+                          Development of functional and class React-Components
+                          using cutting-edge libraries and tools.
+                        </li>
+                        <li>Configuration of react-routes.</li>
+                        <li>Building and launching apps.</li>
+                        <li>Identifying and resolving bugs.</li>
+                      </ol>
+                      <p class="item-list-caption">
+                        Stack: React, React Router, Redux Toolkit, JS
+                      </p>
+                    </div>
                   </li>
                   <li class="resume-item">
                     <h4 class="item-title">2021 - 2022 | hillel IT</h4>
@@ -568,7 +646,7 @@
 
                 <li class="contacts-item">
                   <a
-                    href="tel:+380936007727"
+                    href="tel:+40751454621"
                     target="_blank"
                     class="contacts-item-link focused-item"
                   >
@@ -576,7 +654,7 @@
                       class="contacts-item-icon fas fa-phone-alt highlight-color"
                     >
                     </span>
-                    <span class="contacts-item-name">(+38) 093 600 77 27</span>
+                    <span class="contacts-item-name">(+40) 75 145 46 21</span>
                   </a>
                 </li>
 
@@ -643,6 +721,7 @@
         </section>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/burger.js"></script>
