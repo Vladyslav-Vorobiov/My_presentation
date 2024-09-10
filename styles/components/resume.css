@@ -28,7 +28,7 @@
   content: "";
   left: 22px;
   top: 28px;
-  height: 980px;
+  height: 95%;
   width: 2px;
   background-color: var(--highlight-color);
 }
