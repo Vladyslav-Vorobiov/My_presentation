@@ -57,8 +57,9 @@ textarea:focus::placeholder {
 }
 
 .content {
+  margin-left: 80px;
   height: 100%;
-  overflow-y: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -128,6 +129,10 @@ textarea:focus::placeholder {
 }
 
 @media only screen and (max-width: 768px) {
+  .content {
+    margin-left: 0px;
+  }
+
   .section {
     padding: 40px 0 0;
   }
@@ -143,9 +148,5 @@ textarea:focus::placeholder {
     margin-bottom: 16px;
     font-size: 20px;
     line-height: 30px;
-  }
-
-  .grid {
-    grid-template-columns: auto;
   }
 }
