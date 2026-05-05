@@ -1,837 +1,694 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="freelancehunt" content="e0357f52d4fcaaa">
+    <meta name="freelancehunt" content="e0357f52d4fcaaa" />
+    <meta
+      name="description"
+      content="Vladyslav Vorobiov - Frontend Developer specializing in HTML, CSS, JavaScript, React, Next.js and Vue.js. Based in Bucharest, Romania."
+    />
     <link rel="icon" type="image/x-icon" href="images/favicon-star.png" />
+    <title>Vladyslav Vorobiov - Frontend Developer</title>
 
-    <title>Vladyslav Vorobiov</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/animate.min.css" />
-    <link href="styles/aos.css" rel="stylesheet" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/cursor.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body>
-    <aside class="sidebar">
-      <div class="burger"><span></span></div>
-      <nav class="nav">
-        <div class="nav-logo-wrapper">
-          <img
-            src="./images/aside-logo.png"
-            class="nav-logo-img"
-            alt="generics and slash"
-          />
-        </div>
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a href="#hero" class="nav-link">
-              <i class="nav-link-icon fas fa-home"></i>
-              <span class="nav-link-text">home</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">
-              <i class="nav-link-icon fas fa-user"></i>
-              <span class="nav-link-text">about</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#resume" class="nav-link">
-              <i class="nav-link-icon fas fa-id-card"></i>
-              <span class="nav-link-text">resume</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#portfolio" class="nav-link">
-              <i class="nav-link-icon fas fa-briefcase"></i>
-              <span class="nav-link-text">portfolio</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a href="#contacts" class="nav-link">
-              <i class="nav-link-icon fas fa-envelope"></i>
-              <span class="nav-link-text">contact</span></a
-            >
-          </li>
-        </ul>
-        <a
-          class="to-top fas fa-chevron-up"
-          href="#to-top"
-          aria-label="scroll to top"
-        ></a>
-      </nav>
-    </aside>
+    <!-- ═══ CURSOR ═══ -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
 
-    <main class="content">
-      <div id="to-top"></div>
-      <section id="hero" class="hero section">
-        <div class="container">
-          <h1 class="hero-title animate__animated animate__bounceInRight">
-            Vladyslav Vorobiov
-          </h1>
-          <p class="hero-subtitle animate__animated animate__bounceInLeft">
-            Web Developer. Crafting Front-End with a Deeper Understanding
-          </p>
-          <ul
-            class="hero-social-icons animate__animated animate__fadeInUp animate__delay-1s"
+    <!-- ═══ NAV ═══ -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">VV<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="burger" id="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#portfolio" class="mobile-link">Portfolio</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-bg-grid"></div>
+      <div class="hero-glow"></div>
+
+      <div class="hero-content">
+        <div class="hero-tag">Available for work</div>
+        <h1 class="hero-name">
+          Vladyslav<br />
+          <span class="line2">Vorobiov</span>
+        </h1>
+        <p class="hero-desc">
+          Frontend Developer building<br />
+          <span class="hero-typed" id="typed-text"></span
+          ><span class="cursor-blink"></span>
+        </p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn-primary">View Work ↗</a>
+          <a href="#contact" class="btn-outline">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-socials">
+        <a
+          href="https://www.linkedin.com/in/vladyslav-vorobiov-1990/"
+          target="_blank"
+          rel="noopener"
+          title="LinkedIn"
+          >in</a
+        >
+        <a
+          href="https://github.com/Vladyslav-Vorobiov"
+          target="_blank"
+          rel="noopener"
+          title="GitHub"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
           >
-            <li class="hero-social-icon">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12Z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://t.me/Mista_Twista"
+          target="_blank"
+          rel="noopener"
+          title="Telegram"
+          ><svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style="vertical-align: middle"
+          >
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.19 15.51 15.96C15.37 16.71 15.09 16.96 14.83 16.99C14.25 17.04 13.81 16.61 13.25 16.24C12.37 15.66 11.87 15.3 11.01 14.74C10.02 14.09 10.66 13.73 11.23 13.15C11.37 13.01 13.97 10.64 14.02 10.42C14.03 10.39 14.03 10.28 13.97 10.23C13.91 10.18 13.81 10.2 13.74 10.21C13.65 10.23 12.23 11.17 9.47 13.04C9.07 13.32 8.7 13.45 8.38 13.45C8.03 13.44 7.35 13.25 6.85 13.09C6.23 12.89 5.73 12.78 5.78 12.44C5.8 12.26 6.05 12.08 6.52 11.89C9.41 10.63 11.34 9.79 12.31 9.39C15.08 8.23 15.65 8.03 16.03 8.03C16.11 8.03 16.29 8.05 16.41 8.15C16.51 8.23 16.54 8.34 16.55 8.42C16.55 8.48 16.66 8.64 16.64 8.8Z"
+              fill="currentColor"
+            /></svg
+        ></a>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+
+    <!-- ═══ ABOUT ═══ -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-photo-wrap reveal">
+            <img src="images/photo.jpg" alt="Vladyslav Vorobiov" />
+            <div class="about-photo-badge">
+              <span class="badge-num">4+</span>
+              <span class="badge-label">Years in Frontend</span>
+            </div>
+          </div>
+
+          <div class="about-text-col">
+            <p class="section-label reveal">About me</p>
+            <h2 class="section-title reveal reveal-delay-1">
+              Crafting digital<br /><span>experiences</span>
+            </h2>
+            <p class="about-text reveal reveal-delay-2">
+              I'm <strong>Vladyslav</strong>, a Frontend Developer based in
+              <strong>Bucharest, Romania</strong>, originally from Odessa,
+              Ukraine. Meticulous and committed — I build fast, scalable, and
+              accessible web applications with a sharp eye for detail and clean
+              code.
+            </p>
+            <p class="about-text reveal reveal-delay-3">
+              My primary focus is <strong>React & Next.js</strong> — from
+              complex dashboards and multilingual platforms to public-facing
+              corporate sites. I enjoy finding smart, pattern-consistent
+              solutions that teams can actually build on and maintain long-term.
+            </p>
+            <div class="about-actions reveal reveal-delay-4">
               <a
-                href="https://www.linkedin.com/in/vladyslav-vorobiov-1990/"
-                target="_blank"
-                class="icon-link fab fa-linkedin-in"
-              ></a>
-            </li>
-            <li class="hero-social-icon">
-              <a
-                href="https://github.com/Vladyslav-Vorobiov"
-                target="_blank"
-                class="icon-link fab fa-github"
-              ></a>
-            </li>
-            <li class="hero-social-icon">
+                href="./cv/CV_Vladyslav_Vorobiov_Frontend.pdf"
+                download
+                class="btn-primary"
+                >Download CV</a
+              >
+              <a href="#contact" class="btn-outline">Hire me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SKILLS ═══ -->
+    <section id="skills">
+      <div class="container">
+        <div class="skills-intro">
+          <div>
+            <p class="section-label reveal">Tech stack</p>
+            <h2 class="section-title reveal reveal-delay-1">
+              Tools I<br /><span>work with</span>
+            </h2>
+          </div>
+          <p
+            class="section-sub reveal reveal-delay-2"
+            style="align-self: flex-end"
+          >
+            Primarily focused on the React ecosystem — building scalable,
+            maintainable frontends with modern tooling and best practices.
+          </p>
+        </div>
+
+        <div class="reveal">
+          <p class="skills-section-title">— Core / Primary</p>
+          <div class="skills-grid">
+            <div class="skill-card primary">
+              <span class="skill-icon">🟨</span>
+              <div class="skill-name">JavaScript ES6+</div>
+              <div class="skill-level">Primary</div>
+            </div>
+            <div class="skill-card primary">
+              <span class="skill-icon">🌐</span>
+              <div class="skill-name">HTML5 / CSS3</div>
+              <div class="skill-level">Primary</div>
+            </div>
+            <div class="skill-card primary">
+              <span class="skill-icon">⚛️</span>
+              <div class="skill-name">React</div>
+              <div class="skill-level">Primary</div>
+            </div>
+            <div class="skill-card primary">
+              <span class="skill-icon">▲</span>
+              <div class="skill-name">Next.js</div>
+              <div class="skill-level">Primary</div>
+            </div>
+            <div class="skill-card primary">
+              <span class="skill-icon">🗃️</span>
+              <div class="skill-name">RTK Query</div>
+              <div class="skill-level">Primary</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <p class="skills-section-title">— Also proficient</p>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <span class="skill-icon">🔷</span>
+              <div class="skill-name">TypeScript</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">📋</span>
+              <div class="skill-name">React Hook Form</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🌍</span>
+              <div class="skill-name">react-i18next</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">💚</span>
+              <div class="skill-name">Vue.js</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">📦</span>
+              <div class="skill-name">Vuetify</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🎨</span>
+              <div class="skill-name">SCSS / CSS-in-JS</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🌊</span>
+              <div class="skill-name">Tailwind CSS</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🧪</span>
+              <div class="skill-name">Jest</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🐙</span>
+              <div class="skill-name">Git / GitHub</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🤖</span>
+              <div class="skill-name">AI-assisted Dev</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🔧</span>
+              <div class="skill-name">ESLint / Prettier</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🚀</span>
+              <div class="skill-name">Docker / CI/CD</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🎨</span>
+              <div class="skill-name">Figma</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🔨</span>
+              <div class="skill-name">Agile / Scrum</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EXPERIENCE ═══ -->
+    <section id="experience">
+      <div class="container">
+        <p class="section-label reveal">Background</p>
+        <h2 class="section-title reveal reveal-delay-1">
+          Experience &<br /><span>Education</span>
+        </h2>
+
+        <div class="exp-layout" style="margin-top: 60px">
+          <!-- Work -->
+          <div class="reveal reveal-delay-2">
+            <p class="exp-col-title">Work</p>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">06.2025 — Present</div>
+                <div class="timeline-company">
+                  Business Telecom & VoIP Provider
+                </div>
+                <div class="timeline-role">Frontend Developer</div>
+                <div class="timeline-desc">
+                  Built a large-scale multilingual platform from scratch —
+                  corporate website + personal dashboard. Designed Next.js App
+                  Router architecture combining SPA + SSG. Implemented auth
+                  flows (registration, login, Google / Telegram OAuth),
+                  full-featured dashboard with analytics, balances, services
+                  management, top-ups, transfers, and extended settings. Set up
+                  CI/CD via Docker & GitHub Actions.
+                </div>
+                <div class="timeline-stack">
+                  <span class="tag">React</span>
+                  <span class="tag">Next.js</span>
+                  <span class="tag">RTK Query</span>
+                  <span class="tag">RHF + Yup</span>
+                  <span class="tag">SCSS</span>
+                  <span class="tag">i18next</span>
+                  <span class="tag">Docker</span>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">07.2023 — 02.2025</div>
+                <div class="timeline-company">QP</div>
+                <div class="timeline-role">Frontend Developer</div>
+                <div class="timeline-desc">
+                  CRM development — new components, feature implementation,
+                  business customisation. Complex responsive landing pages and
+                  websites. Bug fixing and junior mentoring.
+                </div>
+                <div class="timeline-stack">
+                  <span class="tag">Vue.js</span>
+                  <span class="tag">Vuetify</span>
+                  <span class="tag">Axios</span>
+                  <span class="tag">Lodash</span>
+                  <span class="tag">Jest</span>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">09.2022 — 08.2023</div>
+                <div class="timeline-company">EXSY</div>
+                <div class="timeline-role">Junior Frontend Developer</div>
+                <div class="timeline-desc">
+                  React component development, routing configuration, app
+                  building and debugging.
+                </div>
+                <div class="timeline-stack">
+                  <span class="tag">React</span>
+                  <span class="tag">Redux Toolkit</span>
+                  <span class="tag">React Router</span>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">03.2021 — 03.2022</div>
+                <div class="timeline-company">HillelIT</div>
+                <div class="timeline-role">Trainee Frontend Developer</div>
+                <div class="timeline-desc">
+                  Adaptive interactive landings with REST API integration.
+                </div>
+                <div class="timeline-stack">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="reveal reveal-delay-3">
+            <p class="exp-col-title">Education</p>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-company">EPAM</div>
+                <div class="timeline-role">
+                  Frontend Fundamentals & Specialization (React)
+                </div>
+                <div class="timeline-desc">
+                  Graduated with honours. JS, TS, React, Redux Toolkit, React
+                  Router. Built full-featured "courses-list" project.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">2021 — 2022</div>
+                <div class="timeline-company">HillelIT School</div>
+                <div class="timeline-role">Frontend Basic & Pro</div>
+                <div class="timeline-desc">
+                  HTML5, CSS3, SASS, Bootstrap, Gulp, BEM, JavaScript ES6+.
+                  Graduated with honours.
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-date">2008 — 2014</div>
+                <div class="timeline-company">
+                  Odessa National Maritime University
+                </div>
+                <div class="timeline-role">
+                  Master's degree — Port Engineering & Project Management
+                </div>
+                <div class="timeline-desc">
+                  Two master's degrees. Background that shaped a systematic
+                  approach to planning and delivering complex projects.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PORTFOLIO ═══ -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="portfolio-header">
+          <div>
+            <p class="section-label reveal">Selected work</p>
+            <h2 class="section-title reveal reveal-delay-1">
+              Recent<br /><span>Projects</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- HEF Service — Featured -->
+          <div class="project-card featured reveal">
+            <img
+              src="images/portfolio/hefservice-preview.jpg"
+              alt="HEF Service website"
+              class="project-img"
+              onerror="
+                this.style.background =
+                  'linear-gradient(135deg,#0d1421,#1a2840)';
+                this.style.minHeight = '220px';
+              "
+            />
+            <div class="project-overlay">
+              <div class="project-type">Commercial · 2025–2026</div>
+              <div class="project-name">HEF Service</div>
+              <div class="project-desc">
+                Corporate website for a service company. Multilingual via
+                i18next, Next.js App Router, RTK Query, Embla carousel, fully
+                responsive custom UI from Figma.
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Next.js</span>
+                  <span class="tag">RTK Query</span>
+                  <span class="tag">i18next</span>
+                  <span class="tag">SCSS</span>
+                </div>
+                <a
+                  href="https://hefservice.com/"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                  >↗</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Iconik -->
+          <div class="project-card reveal reveal-delay-1">
+            <img
+              src="images/portfolio/iconik.jpg"
+              alt="Iconik Event Atelier"
+              class="project-img"
+            />
+            <div class="project-overlay">
+              <div class="project-type">Commercial · Event</div>
+              <div class="project-name">Iconik Event Atelier</div>
+              <div class="project-desc">
+                Elegant website for a luxury event atelier with smooth
+                animations and adaptive layout.
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JS</span>
+                </div>
+                <a
+                  href="https://iconik-event-atelier.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                  >↗</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Appliance -->
+          <div class="project-card reveal reveal-delay-2">
+            <img
+              src="images/portfolio/appliance.jpg"
+              alt="Appliance Store Layout"
+              class="project-img"
+            />
+            <div class="project-overlay">
+              <div class="project-type">Layout · E-commerce</div>
+              <div class="project-name">Appliance Store</div>
+              <div class="project-desc">
+                Pixel-perfect adaptive e-commerce layout with responsive grid
+                and hover interactions.
+              </div>
+              <div class="project-footer">
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">SCSS</span>
+                  <span class="tag">BEM</span>
+                </div>
+                <a
+                  href="https://appliance-layout.vercel.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="project-link"
+                  >↗</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <p class="section-label reveal">Let's talk</p>
+            <h2 class="section-title reveal reveal-delay-1">
+              Get in<br /><span>touch</span>
+            </h2>
+            <p
+              class="section-sub reveal reveal-delay-2"
+              style="margin-bottom: 40px"
+            >
+              Open to new opportunities, freelance projects, or just a chat
+              about frontend.
+            </p>
+
+            <div class="reveal reveal-delay-3">
+              <a href="mailto:vorobiov.v90@gmail.com" class="contact-info-item">
+                <div class="contact-icon">✉</div>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">vorobiov.v90@gmail.com</div>
+                </div>
+              </a>
+              <a href="tel:+40751454621" class="contact-info-item">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  <div class="contact-value">(+40) 75 145 46 21</div>
+                </div>
+              </a>
               <a
                 href="https://t.me/Mista_Twista"
                 target="_blank"
-                class="icon-link fas fa-paper-plane"
-              ></a>
-            </li>
-            <li class="hero-social-icon">
-              <a
-                href="https://www.facebook.com/pablito.piupiu.3"
-                target="_blank"
-                class="icon-link fab fa-facebook-f"
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="about" class="about section">
-        <div class="container">
-          <h1 class="section-title">
-            About <span class="highlight-color">me</span>
-          </h1>
-          <div class="about-content">
-            <div class="about-introduction">
-              <div class="greeting">
-                <span class="greeting-hello">Hello,</span>
-                <p>
-                  My name is Vladyslav Vorobiov, I'm a Front-End Developer from
-                  Odessa, Ukraine. And I'm really good at development, building
-                  and customising adaptive and interactive websites and apps.
-                </p>
-              </div>
-              <div class="about-actions">
-                <a
-                  href="./cv/CV_Vladyslav_Vorobiov_Front-end.pdf"
-                  download
-                  class="btn btn-secondary hovered-content-item focused-item"
-                  >Download CV</a
-                >
-                <a
-                  href="#contacts"
-                  class="btn btn-secondary hovered-content-item focused-item"
-                  >Hire me</a
-                >
-              </div>
-            </div>
-            <div class="about-photo">
-              <img src="images/photo_copy.jpg" alt="my avatar" />
+                rel="noopener"
+                class="contact-info-item"
+              >
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    style="vertical-align: middle"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.64 8.8C16.49 10.38 15.84 14.19 15.51 15.96C15.37 16.71 15.09 16.96 14.83 16.99C14.25 17.04 13.81 16.61 13.25 16.24C12.37 15.66 11.87 15.3 11.01 14.74C10.02 14.09 10.66 13.73 11.23 13.15C11.37 13.01 13.97 10.64 14.02 10.42C14.03 10.39 14.03 10.28 13.97 10.23C13.91 10.18 13.81 10.2 13.74 10.21C13.65 10.23 12.23 11.17 9.47 13.04C9.07 13.32 8.7 13.45 8.38 13.45C8.03 13.44 7.35 13.25 6.85 13.09C6.23 12.89 5.73 12.78 5.78 12.44C5.8 12.26 6.05 12.08 6.52 11.89C9.41 10.63 11.34 9.79 12.31 9.39C15.08 8.23 15.65 8.03 16.03 8.03C16.11 8.03 16.29 8.05 16.41 8.15C16.51 8.23 16.54 8.34 16.55 8.42C16.55 8.48 16.66 8.64 16.64 8.8Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-label">Telegram</div>
+                  <div class="contact-value">@Mista_Twista</div>
+                </div>
+              </a>
             </div>
           </div>
-          <div class="about-skills">
-            <h2 class="section-subtitle">
-              here are <span class="highlight-color">my skills</span>
-            </h2>
 
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://ru.wikipedia.org/wiki/HTML5"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-html.svg"
-                        class="skill-img"
-                        alt="HTML5 Logo"
-                      />
-                      <h4 class="skill-name">HTML5</h4>
-                    </a>
-                  </div>
+          <div class="reveal reveal-delay-2">
+            <form id="contact-form">
+              <div class="form-row form-group">
+                <div>
+                  <label class="form-label">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your name"
+                    required
+                  />
                 </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://ru.wikipedia.org/wiki/CSS"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-css.svg"
-                        class="skill-img"
-                        alt="CSS3 Logo"
-                      />
-                      <h4 class="skill-name">CSS3</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://ru.wikipedia.org/wiki/JavaScript"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-js.svg"
-                        class="skill-img"
-                        alt="JavaScript Logo"
-                      />
-                      <h4 class="skill-name">JavaScript</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://react.dev/"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-react.svg"
-                        class="skill-img"
-                        alt="React Logo"
-                      />
-                      <h4 class="skill-name">React</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://vuejs.org/"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-vue.svg"
-                        class="skill-img"
-                        alt="Vue Logo"
-                      />
-                      <h4 class="skill-name">Vue</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://ru.wikipedia.org/wiki/Gulp"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-gulp.svg"
-                        class="skill-img"
-                        alt="Gulp Logo"
-                      />
-                      <h4 class="skill-name">Gulp</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://ru.wikipedia.org/wiki/Sass"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-sass.svg"
-                        class="skill-img"
-                        alt="SASS Logo"
-                      />
-                      <h4 class="skill-name">SASS</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://redux-toolkit.js.org/"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-redux.svg"
-                        class="skill-img"
-                        alt="Redux Toolkit Logo"
-                      />
-                      <h4 class="skill-name">Redux Toolkit</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://react-bootstrap.github.io/"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-rb.svg"
-                        class="skill-img"
-                        alt="React Bootstrap Logo"
-                      />
-                      <h4 class="skill-name">React Bootstrap</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://www.typescriptlang.org/"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-ts.svg"
-                        class="skill-img"
-                        alt="TypeScript Logo"
-                      />
-                      <h4 class="skill-name">TypeScript</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-bootstrap.svg"
-                        class="skill-img"
-                        alt="Bootstrap Logo"
-                      />
-                      <h4 class="skill-name">Bootstrap</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://jestjs.io/"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-jest.svg"
-                        class="skill-img"
-                        alt="Jest Logo"
-                      />
-                      <h4 class="skill-name">Jest</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://github.com/"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-github.svg"
-                        class="skill-img"
-                        alt="GitHub Logo"
-                      />
-                      <h4 class="skill-name">GitHub</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://en.wikipedia.org/wiki/Agile_software_development"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-agile.svg"
-                        class="skill-img"
-                        alt="Agile Logo"
-                      />
-                      <h4 class="skill-name">Agile</h4>
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="skills-list-item hovered-content-item">
-                    <a
-                      href="https://vuetifyjs.com/en/"
-                      target="_blank"
-                      class="skill-link"
-                    >
-                      <img
-                        src="images/skills/skills-logo-vuetify.svg"
-                        class="skill-img"
-                        alt="Vuetify Logo"
-                      />
-                      <h4 class="skill-name">Vuetify</h4>
-                    </a>
-                  </div>
+                <div>
+                  <label class="form-label">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                    required
+                  />
                 </div>
               </div>
-            </div>
-            <div class="swiper-nav-box">
-              <div class="swiper-button-prev fas fa-chevron-left"></div>
-              <div class="swiper-button-next fas fa-chevron-right"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="resume"
-        class="resume section"
-        data-aos="zoom-in"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <div class="container">
-          <h1 class="section-title">
-            my <span class="highlight-color">resume</span>
-          </h1>
-          <div class="resume-content">
-            <div class="education">
-              <h3 class="section-subtitle">
-                <span
-                  class="highlight-color education-icon fas fa-graduation-cap"
-                >
-                </span
-                >Education
-              </h3>
-              <ul class="resume-list">
-                <li class="resume-item">
-                  <h4 class="item-title">2024 | EPAM</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    Front-end Fundamentals course (JS+TS) <br />
-                    Front-end Specialization course (React)
-                  </h4>
-                  <p class="item-text">
-                    Graduated with honours. Refreshed knowledge with up-to-date
-                    information: JS, TS, React, React Router, Redux Toolkit.
-                    <br />
-                    Created a "courses-list" project with a lot of features by
-                    means of React and local back-end.
-                  </p>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">2022 - 2023 | JunJun IT</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    React + TypeScript course
-                  </h4>
-                  <p class="item-text">
-                    Graduated with honours. Mastered technologies: React, React
-                    Router, Redux Toolkit, TypeScript. <br />
-                    Libraries: Formik, Yup, Lodash, Axios, Immutable, ESLint,
-                    Classnames. <br />Created several projects using these
-                    technologies and libraries.
-                  </p>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">2022 | hillel IT school</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    Front-end pro course
-                  </h4>
-                  <p class="item-text">
-                    Graduated with honours. Mastered JavaScript ES6+ and its
-                    up-to-date principles and methodologies. Created several
-                    interactive projects by means of JS.
-                  </p>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">2021 | hillel IT school</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    front-end basic course
-                  </h4>
-                  <p class="item-text">
-                    Graduated with honours. Mastered technologies: HTML5, CSS3,
-                    SASS, Bootstrap, Gulp, BEM. Learned how to make adaptive and
-                    responsive layouts, created several.
-                  </p>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">
-                    2012 - 2014 | odessa national maritime university
-                  </h4>
-                  <h4 class="item-subtitle highlight-color">
-                    department of project management
-                  </h4>
-                  <p class="item-text">
-                    Master's degree in projects and programs management.
-                  </p>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">
-                    2008 - 2014 | odessa national maritime university
-                  </h4>
-                  <h4 class="item-subtitle highlight-color">
-                    department of port engineering
-                  </h4>
-                  <p class="item-text">
-                    Master's degree in mechanical engineering.
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="experience">
-              <h3 class="section-subtitle">
-                <span class="highlight-color experience-icon fas fa-pen"> </span
-                >Experience
-              </h3>
-              <ul class="resume-list">
-                <li class="resume-item">
-                  <h4 class="item-title">07.2023 - till now | QP</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    Font-end developer
-                  </h4>
-                  <div class="item-text">
-                    <ol class="item-list">
-                      <li>
-                        Collaborating on CRM development: designing and
-                        implementing new components, enhancing existing
-                        features, and customizing solutions to meet business
-                        needs.
-                      </li>
-                      <li>
-                        Website development: building and adapting complex
-                        website layouts with a focus on responsiveness and user
-                        experience.
-                      </li>
-                      <li>Identifying and resolving bugs.</li>
-                      <li>Mentoring newcomers.</li>
-                    </ol>
-                    <p class="item-list-caption">
-                      Stack: HTML, CSS, JS, Vue.js, Vuetify, GitHub, Axios,
-                      Lodash, Jest.
-                    </p>
-                    <p class="item-list-caption">
-                      Work Methodology: Agile/Scrum (Jira, Confluence)
-                    </p>
-                  </div>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">08.2022 - 07.2023 | EXSY</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    Junior front-end developer
-                  </h4>
-                  <div class="item-text">
-                    <ol class="item-list">
-                      <li>
-                        Development of functional and class React-Components
-                        using cutting-edge libraries and tools.
-                      </li>
-                      <li>Configuration of react-routes.</li>
-                      <li>Building and launching apps.</li>
-                      <li>Identifying and resolving bugs.</li>
-                    </ol>
-                    <p class="item-list-caption">
-                      Stack: React, React Router, Redux Toolkit, JS
-                    </p>
-                  </div>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">2021 - 2022 | hillel IT</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    Trainee front-end developer / part-time
-                  </h4>
-                  <p class="item-text">
-                    Creation of interactive adaptive landings and web sites
-                    through the Rest API. Debugging code. <br />
-                    Stack: HTML, CSS, JavaScript
-                  </p>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">2019-2022 | MHM Ukraine Ltd.</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    Sales &amp; Project Manager
-                  </h4>
-                  <p class="item-text">
-                    Sale and supply of industrial equipment. Customer search,
-                    contracting, whole lifecycle project management.
-                  </p>
-                </li>
-                <li class="resume-item">
-                  <h4 class="item-title">2014-2019 | Dialab Ltd.</h4>
-                  <h4 class="item-subtitle highlight-color">
-                    Mechanical engineer
-                  </h4>
-                  <p class="item-text">
-                    Inspection and technical diagnostics of port cargo-lifting
-                    equipment. Preparation of protocols on the technical
-                    condition of the equipment. Drawing up and issuing expert
-                    conclusions on the results of the inspection.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="portfolio"
-        class="portfolio section"
-        data-aos="fade-right"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <div class="container">
-          <h1 class="section-title">
-            my <span class="highlight-color">works</span>
-          </h1>
-          <ul class="portfolio-items">
-            <li class="portfolio-item">
-              <a
-                href="https://react-phonebook-six.vercel.app/"
-                target="_blank"
-                class="portfolio-item-link focused-item"
-              >
-                <img
-                  src="images/portfolio/phonebook.jpg"
-                  class="portfolio-item-img"
-                  alt="Phonebook application"
-                />
-                <div class="portfolio-item-footer">
-                  <h3 class="item-footer-name">Phonebook</h3>
-                </div>
-              </a>
-            </li>
-            <li class="portfolio-item">
-              <a
-                href="https://iconik-event-atelier.vercel.app/"
-                target="_blank"
-                class="portfolio-item-link focused-item"
-              >
-                <img
-                  src="images/portfolio/iconik.jpg"
-                  class="portfolio-item-img"
-                  alt="Iconik event atelier"
-                />
-                <div class="portfolio-item-footer">
-                  <h3 class="item-footer-name">Iconik Event Atelier</h3>
-                </div>
-              </a>
-            </li>
-            <li class="portfolio-item">
-              <a
-                href="https://react-todo-list-zeta-olive.vercel.app/"
-                target="_blank"
-                class="portfolio-item-link focused-item"
-              >
-                <img
-                  src="images/portfolio/todolist.jpg"
-                  class="portfolio-item-img"
-                  alt="Todo list"
-                />
-                <div class="portfolio-item-footer">
-                  <h3 class="item-footer-name">ToDo list</h3>
-                </div>
-              </a>
-            </li>
-
-            <li class="portfolio-item">
-              <a
-                href="https://appliance-layout.vercel.app/"
-                target="_blank"
-                class="portfolio-item-link focused-item"
-              >
-                <img
-                  src="images/portfolio/appliance.jpg"
-                  class="portfolio-item-img"
-                  alt="Appliance layout"
-                />
-                <div class="portfolio-item-footer">
-                  <h3 class="item-footer-name">
-                    "Appliance" - adaptive layout
-                  </h3>
-                </div>
-              </a>
-            </li>
-            <li class="portfolio-item">
-              <a
-                href="https://animated-cube.vercel.app/"
-                target="_blank"
-                class="portfolio-item-link focused-item"
-              >
-                <img
-                  src="images/portfolio/cube.jpg"
-                  class="portfolio-item-img"
-                  alt="Responsive portfolio"
-                />
-                <div class="portfolio-item-footer">
-                  <h3 class="item-footer-name">animated 3D cube</h3>
-                </div>
-              </a>
-            </li>
-            <li class="portfolio-item">
-              <a
-                href="https://grid-gallery-iota.vercel.app/"
-                target="_blank"
-                class="portfolio-item-link focused-item"
-              >
-                <img
-                  src="images/portfolio/grid-gallery.jpg"
-                  class="portfolio-item-img"
-                  alt="Animated 3D cube"
-                />
-                <div class="portfolio-item-footer">
-                  <h3 class="item-footer-name">responsive grid gallery</h3>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section
-        id="contacts"
-        class="contacts section"
-        data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="500"
-      >
-        <div class="container">
-          <h1 class="section-title">
-            get <span class="highlight-color">in touch</span>
-          </h1>
-          <div class="contacts-content">
-            <ul class="contacts-list">
-              <li class="contacts-item">
-                <a
-                  href="https://goo.gl/maps/PhiFJm68dr563XWe7?coh=178571&entry=tt"
-                  target="_blank"
-                  class="contacts-item-link focused-item"
-                >
-                  <span
-                    class="contacts-item-icon fas fa-map-marker-alt highlight-color"
-                  >
-                  </span>
-                  <span class="contacts-item-name">Bucharest, Romania</span>
-                </a>
-              </li>
-
-              <li class="contacts-item">
-                <a
-                  href="tel:+40751454621"
-                  target="_blank"
-                  class="contacts-item-link focused-item"
-                >
-                  <span
-                    class="contacts-item-icon fas fa-phone-alt highlight-color"
-                  >
-                  </span>
-                  <span class="contacts-item-name">(+40) 75 145 46 21</span>
-                </a>
-              </li>
-
-              <li class="contacts-item">
-                <a
-                  href="mailto:vorobiov.90@gmail.com"
-                  target="_blank"
-                  class="contacts-item-link focused-item"
-                >
-                  <span
-                    class="contacts-item-icon fas fa-envelope highlight-color"
-                  >
-                  </span>
-                  <span class="contacts-item-name">vorobiov.v90@gmail.com</span>
-                </a>
-              </li>
-            </ul>
-            <form id="form" class="contact-form">
-              <div class="contact-form-line">
-                <input
-                  type="text"
-                  name="name"
-                  class="contact-form-field"
-                  placeholder="Name *"
-                  required
-                />
-                <input
-                  type="text"
-                  name="email"
-                  class="contact-form-field"
-                  placeholder="Email *"
-                  required
-                />
-              </div>
-              <div class="contact-form-line">
+              <div class="form-group">
+                <label class="form-label">Subject</label>
                 <input
                   type="text"
                   name="subject"
-                  class="contact-form-field"
-                  placeholder="Subject *"
+                  class="form-input"
+                  placeholder="What's this about?"
                   required
                 />
               </div>
-              <div class="contact-form-line">
+              <div class="form-group">
+                <label class="form-label">Message</label>
                 <textarea
                   name="message"
-                  rows="7"
-                  class="contact-form-field"
-                  placeholder="Write message"
+                  class="form-textarea"
+                  placeholder="Tell me about your project..."
                   required
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                class="btn btn-primary btn-submit focused-item"
-              >
-                send message
-              </button>
+              <button type="submit" class="form-submit">Send Message →</button>
+              <p class="form-success" id="form-success">
+                ✓ Message sent! I'll get back to you soon.
+              </p>
             </form>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <script src="./js/axios.min.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/swiper.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/burger.js"></script>
-    <script src="./js/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <!-- ═══ FOOTER ═══ -->
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <p class="footer-copy">
+            © 2026 Vladyslav Vorobiov. Built with clean HTML & love.
+          </p>
+          <div class="footer-links">
+            <a
+              href="https://www.linkedin.com/in/vladyslav-vorobiov-1990/"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/Vladyslav-Vorobiov"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+            <a href="https://t.me/Mista_Twista" target="_blank" rel="noopener"
+              >Telegram</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script src="js/particles.js"></script>
+    <script src="js/typed.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
