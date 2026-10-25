@@ -105,6 +105,66 @@
   margin-top: 12px;
 }
 
+.timeline-desc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.timeline-desc a:hover {
+  text-decoration: underline;
+}
+
+.exp-work .timeline-role {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.exp-work .timeline-company {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  opacity: 0.75;
+  letter-spacing: 0.3px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.timeline-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.timeline-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 6px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.timeline-list strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .exp-layout {

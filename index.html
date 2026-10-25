@@ -152,18 +152,27 @@
               Crafting digital<br /><span>experiences</span>
             </h2>
             <p class="about-text reveal reveal-delay-2">
-              I'm <strong>Vladyslav</strong>, a Frontend Developer based in
-              <strong>Bucharest, Romania</strong>, originally from Odessa,
-              Ukraine. Meticulous and committed — I build fast, scalable, and
-              accessible web applications with a sharp eye for detail and clean
-              code.
+              I'm Vladyslav, a
+              <strong>Frontend Developer</strong> based in Bucharest, originally
+              from Odessa, Ukraine. I came to the web from port engineering and
+              project management, so I treat an interface like a system: it
+              should be fast, scalable, accessible, and hold up when the
+              requirements change.
             </p>
             <p class="about-text reveal reveal-delay-3">
-              My primary focus is <strong>React & Next.js</strong> — from
-              complex dashboards and multilingual platforms to public-facing
-              corporate sites. I enjoy finding smart, pattern-consistent
-              solutions that teams can actually build on and maintain long-term.
+              My focus is <strong>React & Next.js</strong>: multilingual
+              platforms, data-heavy dashboards and public corporate sites. Solo
+              or in a team, I stay close to designers, backend and PMs, so
+              nothing gets lost between design and production. I use AI tools
+              daily to move faster, and review everything they write before it
+              ships.
             </p>
+
+            <div class="about-langs reveal reveal-delay-3">
+              <span class="tag">English · B2</span>
+              <span class="tag">Ukrainian · native</span>
+              <span class="tag">Russian · fluent</span>
+            </div>
             <div class="about-actions reveal reveal-delay-4">
               <a
                 href="./cv/CV_Vladyslav_Vorobiov_Frontend.pdf"
@@ -192,13 +201,13 @@
             class="section-sub reveal reveal-delay-2"
             style="align-self: flex-end"
           >
-            Primarily focused on the React ecosystem — building scalable,
+            Primarily focused on the React ecosystem - building scalable,
             maintainable frontends with modern tooling and best practices.
           </p>
         </div>
 
         <div class="reveal">
-          <p class="skills-section-title">— Core / Primary</p>
+          <p class="skills-section-title">- Core / Primary</p>
           <div class="skills-grid">
             <div class="skill-card primary">
               <span class="skill-icon">🟨</span>
@@ -229,7 +238,7 @@
         </div>
 
         <div class="reveal reveal-delay-2">
-          <p class="skills-section-title">— Also proficient</p>
+          <p class="skills-section-title">- Also proficient</p>
           <div class="skills-grid">
             <div class="skill-card">
               <span class="skill-icon">🔷</span>
@@ -237,7 +246,15 @@
             </div>
             <div class="skill-card">
               <span class="skill-icon">📋</span>
-              <div class="skill-name">React Hook Form</div>
+              <div class="skill-name">RHF + Yup</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🧰</span>
+              <div class="skill-name">Redux Toolkit</div>
+            </div>
+            <div class="skill-card">
+              <span class="skill-icon">🔌</span>
+              <div class="skill-name">REST API / Axios</div>
             </div>
             <div class="skill-card">
               <span class="skill-icon">🌍</span>
@@ -253,12 +270,17 @@
             </div>
             <div class="skill-card">
               <span class="skill-icon">🎨</span>
-              <div class="skill-name">SCSS / CSS-in-JS</div>
+              <div class="skill-name">SCSS Modules / BEM</div>
             </div>
             <div class="skill-card">
               <span class="skill-icon">🌊</span>
               <div class="skill-name">Tailwind CSS</div>
             </div>
+            <div class="skill-card">
+              <span class="skill-icon">🎞️</span>
+              <div class="skill-name">Framer Motion</div>
+            </div>
+
             <div class="skill-card">
               <span class="skill-icon">🧪</span>
               <div class="skill-name">Jest</div>
@@ -269,7 +291,7 @@
             </div>
             <div class="skill-card">
               <span class="skill-icon">🤖</span>
-              <div class="skill-name">AI-assisted Dev</div>
+              <div class="skill-name">AI Dev (Claude Code)</div>
             </div>
             <div class="skill-card">
               <span class="skill-icon">🔧</span>
@@ -277,7 +299,7 @@
             </div>
             <div class="skill-card">
               <span class="skill-icon">🚀</span>
-              <div class="skill-name">Docker / CI/CD</div>
+              <div class="skill-name">Docker/GitHub Actions</div>
             </div>
             <div class="skill-card">
               <span class="skill-icon">🎨</span>
@@ -302,60 +324,94 @@
 
         <div class="exp-layout" style="margin-top: 60px">
           <!-- Work -->
-          <div class="reveal reveal-delay-2">
+          <div class="reveal reveal-delay-2 exp-work">
             <p class="exp-col-title">Work</p>
             <div class="timeline">
               <div class="timeline-item">
-                <div class="timeline-date">06.2025 — Present</div>
+                <div class="timeline-date">06.2025 - Present</div>
+                <div class="timeline-role">Frontend Developer</div>
                 <div class="timeline-company">
                   Business Telecom & VoIP Provider
                 </div>
-                <div class="timeline-role">Frontend Developer</div>
-                <div class="timeline-desc">
-                  Built a large-scale multilingual platform from scratch —
-                  corporate website + personal dashboard. Designed Next.js App
-                  Router architecture combining SPA + SSG. Implemented auth
-                  flows (registration, login, Google / Telegram OAuth),
-                  full-featured dashboard with analytics, balances, services
-                  management, top-ups, transfers, and extended settings. Set up
-                  CI/CD via Docker & GitHub Actions.
-                </div>
+                <ul class="timeline-list">
+                  <li>
+                    Sole front-end developer in a team of four: built a
+                    commercial platform from scratch, a
+                    <strong>corporate website</strong> (15-20 pages) and a
+                    <strong>customer dashboard</strong> (200+ components) used
+                    by 150+ clients
+                  </li>
+                  <li>
+                    Next.js App Router architecture: SSG public site,
+                    client-side dashboard, locale routing, SEO and hreflang.
+                    <strong>Lighthouse 98 Performance </strong>, 96
+                    accessibility, 100 best practices, 92 SEO
+                  </li>
+                  <li>
+                    Auth end to end: email verification, Google / Telegram
+                    login, account linking, token refresh with request retry via
+                    RTK Query
+                  </li>
+                  <li>
+                    Dashboard: account settings, analytics, call history,
+                    balance, top-ups, transfers, equipment and projects
+                    management
+                  </li>
+                  <li>
+                    Custom SCSS Modules UI from Figma with a reusable component
+                    library; ESLint / Prettier, Docker, GitHub Actions CI/CD
+                  </li>
+                </ul>
                 <div class="timeline-stack">
                   <span class="tag">React</span>
                   <span class="tag">Next.js</span>
+                  <span class="tag">Redux Toolkit</span>
                   <span class="tag">RTK Query</span>
                   <span class="tag">RHF + Yup</span>
                   <span class="tag">SCSS</span>
                   <span class="tag">i18next</span>
+                  <span class="tag">Framer Motion</span>
                   <span class="tag">Docker</span>
+                  <span class="tag">GitHub Actions</span>
                 </div>
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-date">07.2023 — 02.2025</div>
-                <div class="timeline-company">QP</div>
+                <div class="timeline-date">07.2023 - 02.2025</div>
                 <div class="timeline-role">Frontend Developer</div>
-                <div class="timeline-desc">
-                  CRM development — new components, feature implementation,
-                  business customisation. Complex responsive landing pages and
-                  websites. Bug fixing and junior mentoring.
-                </div>
+                <div class="timeline-company">QP</div>
+                <ul class="timeline-list">
+                  <li>
+                    Dozens of responsive landing pages and websites that brought
+                    in new clients
+                  </li>
+                  <li>
+                    Built and extended UI components for a large in-house CRM
+                  </li>
+                  <li>
+                    Bug fixing, Jest tests, code reviews, mentoring new team
+                    members
+                  </li>
+                </ul>
                 <div class="timeline-stack">
                   <span class="tag">Vue.js</span>
                   <span class="tag">Vuetify</span>
                   <span class="tag">Axios</span>
                   <span class="tag">Lodash</span>
                   <span class="tag">Jest</span>
+                  <span class="tag">Git</span>
+                  <span class="tag">Agile/Scrum</span>
                 </div>
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-date">09.2022 — 08.2023</div>
+                <div class="timeline-date">09.2022 - 08.2023</div>
+                <div class="timeline-role">React Developer (part-time)</div>
                 <div class="timeline-company">EXSY</div>
-                <div class="timeline-role">Junior Frontend Developer</div>
                 <div class="timeline-desc">
-                  React component development, routing configuration, app
-                  building and debugging.
+                  Functional and class React components, client-side routing,
+                  state management with Redux Toolkit, debugging and releasing
+                  apps.
                 </div>
                 <div class="timeline-stack">
                   <span class="tag">React</span>
@@ -365,11 +421,13 @@
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-date">03.2021 — 03.2022</div>
-                <div class="timeline-company">HillelIT</div>
-                <div class="timeline-role">Trainee Frontend Developer</div>
+                <div class="timeline-date">03.2021 - 03.2022</div>
+                <div class="timeline-role">Junior Frontend Developer</div>
+                <div class="timeline-company">Hillel IT</div>
+
                 <div class="timeline-desc">
-                  Adaptive interactive landings with REST API integration.
+                  Built interactive, responsive landing pages and websites
+                  integrated with REST APIs.
                 </div>
                 <div class="timeline-stack">
                   <span class="tag">HTML</span>
@@ -397,22 +455,35 @@
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-date">2021 — 2022</div>
-                <div class="timeline-company">HillelIT School</div>
+                <div class="timeline-date">2021 - 2022</div>
+                <div class="timeline-company">Hillel IT School</div>
                 <div class="timeline-role">Frontend Basic & Pro</div>
                 <div class="timeline-desc">
                   HTML5, CSS3, SASS, Bootstrap, Gulp, BEM, JavaScript ES6+.
                   Graduated with honours.
+                  <a
+                    href="https://certificate.ithillel.ua/view/23916135"
+                    target="_blank"
+                    rel="noopener"
+                    >Certificate 1</a
+                  >
+                  ·
+                  <a
+                    href="https://certificate.ithillel.ua/view/14418282"
+                    target="_blank"
+                    rel="noopener"
+                    >Certificate 2</a
+                  >
                 </div>
               </div>
 
               <div class="timeline-item">
-                <div class="timeline-date">2008 — 2014</div>
+                <div class="timeline-date">2008 - 2014</div>
                 <div class="timeline-company">
                   Odessa National Maritime University
                 </div>
                 <div class="timeline-role">
-                  Master's degree — Port Engineering & Project Management
+                  Master's degree - Port Engineering & Project Management
                 </div>
                 <div class="timeline-desc">
                   Two master's degrees. Background that shaped a systematic
@@ -646,6 +717,15 @@
                   required
                 ></textarea>
               </div>
+
+              <input
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+                style="position: absolute; left: -9999px"
+                aria-hidden="true"
+              />
               <button type="submit" class="form-submit">Send Message →</button>
               <p class="form-success" id="form-success">
                 ✓ Message sent! I'll get back to you soon.
